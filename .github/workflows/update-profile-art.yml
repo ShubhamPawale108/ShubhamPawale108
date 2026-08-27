@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          pip install -r scripts/requirements.txt
 
       - name: Fetch Contributions
         run: python scripts/fetch_contributions.py
@@ -34,10 +34,18 @@ jobs:
       - name: Render Heatmap SVG
         run: python scripts/render_heatmap_svg.py
         
+      - name: Generate Neofetch Info Card
+        run: python scripts/make_info_card.py
+        
+      - name: Generate ASCII Profile
+        run: |
+          python scripts/prep_photo.py || true
+          python scripts/make_ascii_svg.py
+        
       - name: Commit and Push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/contributions.json assets/contrib-heatmap.svg
+          git add data/ assets/
           # Only commit if there are changes
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: refresh contribution graph [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: refresh profile art [skip ci]" && git push)
