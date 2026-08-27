@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 285" width="500" height="285">
+
+    <style>
+        .terminal-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            fill: #c9d1d9;
+            opacity: 0;
+            animation: slideIn 0.5s ease-out forwards;
+        }
+        .prompt {
+            fill: #7ee787;
+            font-weight: bold;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+    <rect width="500" height="285" fill="#0d1117" rx="6" ry="6"/><circle cx="15" cy="15" r="5" fill="#ff5f56"/><circle cx="35" cy="15" r="5" fill="#ffbd2e"/><circle cx="55" cy="15" r="5" fill="#27c93f"/><text x="15" y="45" class="terminal-text" style="animation-delay: 0.1s;"><tspan class="prompt">guest@github</tspan>:<tspan fill="#79c0ff">~</tspan>$ neofetch --profile</text><text x="15" y="70" class="terminal-text" style="animation-delay: 0.3s;"><tspan fill="#ff7b72" font-weight="bold">NAME      </tspan>: Shubham Pawale</text><text x="15" y="95" class="terminal-text" style="animation-delay: 0.4s;"><tspan fill="#ff7b72" font-weight="bold">ROLE      </tspan>: Software Developer | Backend Developer</text><text x="15" y="120" class="terminal-text" style="animation-delay: 0.5s;"><tspan fill="#ff7b72" font-weight="bold">EDUCATION </tspan>: MCA @ Sterling Institute | B.Sc CS @ Pillai College</text><text x="15" y="145" class="terminal-text" style="animation-delay: 0.6000000000000001s;"><tspan fill="#ff7b72" font-weight="bold">LOCATION  </tspan>: New Panvel, India</text><text x="15" y="170" class="terminal-text" style="animation-delay: 0.7s;"><tspan fill="#ff7b72" font-weight="bold">LANGUAGES </tspan>: Java, Python, C</text><text x="15" y="195" class="terminal-text" style="animation-delay: 0.8s;"><tspan fill="#ff7b72" font-weight="bold">FRONTEND  </tspan>: React Native, React, HTML5, CSS3</text><text x="15" y="220" class="terminal-text" style="animation-delay: 0.9000000000000001s;"><tspan fill="#ff7b72" font-weight="bold">BACKEND   </tspan>: NestJS, Node.js, REST APIs, GraphQL</text><text x="15" y="245" class="terminal-text" style="animation-delay: 1.0s;"><tspan fill="#ff7b72" font-weight="bold">DATABASE  </tspan>: MongoDB, MySQL</text><text x="15" y="270" class="terminal-text" style="animation-delay: 1.1s;"><tspan fill="#ff7b72" font-weight="bold">TOOLS     </tspan>: Git, GitHub, VS Code, Expo, AWS</text>
+</svg>
