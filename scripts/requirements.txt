@@ -1,0 +1,6 @@
+beautifulsoup4==4.12.3
+requests==2.31.0
+pillow==10.3.0
+numpy==1.26.4
+opencv-python==4.9.0.80
+rembg==2.0.56
