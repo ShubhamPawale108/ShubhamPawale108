@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 176" width="300" height="176">
+
+    <style>
+        .ascii {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+            font-weight: bold;
+            fill: #c9d1d9;
+            white-space: pre;
+        }
+        .line {
+            opacity: 0;
+            animation: typeIn 0.1s linear forwards;
+        }
+        @keyframes typeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <rect width="300" height="176" fill="transparent" /><text x="10" y="15" class="ascii line" style="animation-delay: 0.0s;">      _..._      </text><text x="10" y="27" class="ascii line" style="animation-delay: 0.1s;">    .'     '.    </text><text x="10" y="39" class="ascii line" style="animation-delay: 0.2s;">   /  _   _  \   </text><text x="10" y="51" class="ascii line" style="animation-delay: 0.30000000000000004s;">   | (o)_(o) |   </text><text x="10" y="63" class="ascii line" style="animation-delay: 0.4s;">   \    _    /   </text><text x="10" y="75" class="ascii line" style="animation-delay: 0.5s;">    '.  _  .'    </text><text x="10" y="87" class="ascii line" style="animation-delay: 0.6000000000000001s;">      '---'      </text><text x="10" y="99" class="ascii line" style="animation-delay: 0.7000000000000001s;">                 </text><text x="10" y="111" class="ascii line" style="animation-delay: 0.8s;"> Placeholder!    </text><text x="10" y="123" class="ascii line" style="animation-delay: 0.9s;"> Add photo to    </text><text x="10" y="135" class="ascii line" style="animation-delay: 1.0s;"> assets/profile- </text><text x="10" y="147" class="ascii line" style="animation-delay: 1.1s;"> source.png and  </text><text x="10" y="159" class="ascii line" style="animation-delay: 1.2000000000000002s;"> run scripts!    </text>
+</svg>
