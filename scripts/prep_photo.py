@@ -14,15 +14,18 @@ REPO_ROOT = Path(__file__).parent.parent.resolve()
 ASSETS_DIR = REPO_ROOT / "assets"
 
 def prep_photo():
-    source_path = ASSETS_DIR / "profile-source.png"
+    # Find any image in assets directory
+    source_path = None
+    for file in ASSETS_DIR.iterdir():
+        if file.suffix.lower() in ['.png', '.jpg', '.jpeg'] and "prepped" not in file.name:
+            source_path = file
+            break
+            
     out_path = ASSETS_DIR / "profile-prepped.png"
     
-    if not source_path.exists():
-        # Maybe it's a jpg
-        source_path = ASSETS_DIR / "profile-source.jpg"
-        if not source_path.exists():
-            print("No source photo found. Please add profile-source.png or profile-source.jpg to the assets folder.")
-            return False
+    if not source_path:
+        print("No source photo found. Please add an image (.png or .jpg) to the assets folder.")
+        return False
             
     print(f"Processing {source_path}...")
     

@@ -1,5 +1,6 @@
 import json
 import sys
+import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent.resolve()
@@ -58,10 +59,16 @@ def render_heatmap():
     </style>
     """)
     
+    # Calculate starting day offset (0 = Sunday, 1 = Monday, etc.)
+    days_to_render = days[-371:]
+    first_date = datetime.datetime.strptime(days_to_render[0]["date"], "%Y-%m-%d")
+    first_day_of_week = (first_date.weekday() + 1) % 7
+    
     # Draw cells
-    for i, day in enumerate(days[-371:]): # Ensure max 53 weeks * 7 days
-        week = i // days_count
-        day_of_week = i % days_count
+    for i, day in enumerate(days_to_render):
+        offset = i + first_day_of_week
+        week = offset // days_count
+        day_of_week = offset % days_count
         
         x = week * (cell_size + cell_gap) + cell_gap
         y = day_of_week * (cell_size + cell_gap) + cell_gap

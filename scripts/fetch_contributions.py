@@ -86,6 +86,9 @@ def fetch_contributions(username):
     if not contributions:
         print("Error: Parsed days but found no valid dates.")
         sys.exit(1)
+        
+    # Sort chronologically (GitHub HTML might not be in order)
+    contributions.sort(key=lambda x: x["date"])
 
     print(f"Successfully fetched {len(contributions)} days of contributions.")
     print(f"Total Contributions: {total_count}")
