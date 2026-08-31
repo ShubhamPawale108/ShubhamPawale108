@@ -54,9 +54,17 @@ def fetch_contributions(username):
         # Actually, GitHub currently puts the count in `<tool-tip>N contributions on YYYY-MM-DD</tool-tip>`
         # Or inside `<span class="sr-only">N contributions on...</span>`
         count = 0
-        sr_only = day.find('span', {'class': 'sr-only'})
-        if sr_only:
-            text = sr_only.text.strip()
+        day_id = day.get('id')
+        tooltip = soup.find('tool-tip', {'for': day_id}) if day_id else None
+        
+        # Fallback if tooltip isn't found, try finding sr-only span or use inner text
+        if tooltip:
+            text = tooltip.text.strip()
+        else:
+            sr_only = day.find('span', {'class': 'sr-only'})
+            text = sr_only.text.strip() if sr_only else day.text.strip()
+
+        if text:
             if text.lower().startswith('no '):
                 count = 0
             else:
