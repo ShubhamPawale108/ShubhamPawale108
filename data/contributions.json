@@ -1,6 +1,6 @@
 {
   "username": "ShubhamPawale108",
-  "fetched_at": "2026-10-24T03:11:43.374541Z",
+  "fetched_at": "2026-10-25T03:06:42.586915Z",
   "total_contributions": 54,
   "longest_streak": 4,
   "best_day": {
@@ -8,41 +8,6 @@
     "count": 10
   },
   "days": [
-    {
-      "date": "2025-10-19",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-10-20",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-10-21",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-10-22",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-10-23",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-10-24",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-10-25",
-      "level": 0,
-      "count": 0
-    },
     {
       "date": "2025-10-26",
       "level": 0,
@@ -1860,6 +1825,11 @@
     },
     {
       "date": "2026-10-24",
+      "level": 0,
+      "count": 0
+    },
+    {
+      "date": "2026-10-25",
       "level": 0,
       "count": 0
     }
